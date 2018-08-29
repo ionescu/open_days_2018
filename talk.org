@@ -1,0 +1,55 @@
+Abstract: The question of what is a mathematical property (such as "even"
+for integers, or "equilateral" for triangles) leads us to consider the
+difference between classical and constructive mathematics, and the
+limits of computation.
+
+- examples of properties
+  - even
+  - positive
+  - equilateral
+- but what is a property?
+  - extensional (nominalist) point of view: a /set/
+    - the set of all even numbers 
+    - the set of all positive numbers
+    - the set of all equilateral triangles
+  - intensional: a /function/, a rule that tells us whether it has the property or not
+    - Bool = {True, False}
+    - notation: P : X -> Bool
+    - Even : Nat -> Bool, Positive : Int -> Bool, Equilateral : Triangles -> Bool
+  - the two points of view are equivalent:
+    - given the set, say A, P x = x `in` A
+    - given the property, say P : X -> Bool, A = {x `in` X; P x = True}
+- how many properties are there?
+  - assume we have f : (Nat -> Bool) -> Nat /bijective/
+  - g : Nat -> (Nat -> Bool), f (g (n)) = n, g (f (P)) = P
+  - R n = not (g n n)
+  - Let f R = r
+  - what is R r?
+    R r = g r r = not (g (f R) r) = not (R r) contradiction
+  - so there are more properties of natural numbers than natural numbers
+  - it holds for any set: there are more properties of X than elements of X
+  - alternatively: there are more subsets of X than elements of X
+- something fishy: definitely indefinite properties!
+  - there are as many /programs/ as there are natural numbers
+    - Mehran's explanation
+  - perhaps we should take as a property only something that really gives us the answer in a finite number of steps
+  - in that case, there are as many properties as there are natural numbers
+- but then, shouldn't we also ask for f and g to be terminating programs?
+  - constructive mathematics: we only accept functions that are terminating programs
+  - that means, we want f and g to be terminating programs
+  - write P : X ~> Bool for a terminating program
+  - then f : (Nat ~> Bool) -> Nat, g : Nat ~> (Nat ~> Bool)
+  - but then R n = not (g n n) is a terminating program
+    - so I can compute R r and obtain the same contradiction
+  - that means, there are no such f and g
+  - for the constructivist also the there are more properties than numbers
+  - but from the /outside/, we can see that there cannot be more properties than numbers!
+  - Clinton: "It depends upon what the meaning of the word is... is."
+- what is the explanation?
+  - the set of terminating programs is not /recursive/, the problem of whether a given program terminates is /undecidable/
+  - the property of termination is not a constructive property of programs
+
+  
+  
+
+ 
