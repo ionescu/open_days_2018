@@ -145,35 +145,13 @@
 > Nat = {0, 1, 2, 3, ...}
   \vfill
   \begin{itemize}
-  \item even |= {0, 2, 4, 6, 8, ...}|
+  \item even: |Evens = {0, 2, 4, 6, 8, ...}|
     \vfill
-  \item equals |2| |= {2}|
+  \item equals |2|: |Eq2 = {2}|
     \vfill
-  \item smaller than |3| |= {0, 1, 2}|
+  \item smaller than |3|: |Smaller3 = {0, 1, 2}|
     \vfill
-  \item prime |= {2, 3, 5, 7, 11, ...}|
-    \vfill
-  \item \ldots
-    \vfill
-  \end{itemize}
-\vfill
-\end{frame}
-
-%% -------------------------------------------------------------------
-
-\begin{frame}
-  \frametitle{The extensional view}
-  \vfill
-> Nat = {0, 1, 2, 3, ...}
-  \vfill
-  \begin{itemize}
-  \item even |= {n suth  n divisible by 2}|
-    \vfill
-  \item equals |2| |= {n suth n = 2}|
-    \vfill
-  \item smaller than |3| |= {n suth n < 3}|
-    \vfill
-  \item prime |= {n suth n has exactly two divisors}|
+  \item prime: |Primes = {2, 3, 5, 7, 11, ...}|
     \vfill
   \item \ldots
     \vfill
@@ -189,13 +167,35 @@
 > Nat = {0, 1, 2, 3, ...}
   \vfill
   \begin{itemize}
-  \item even |= {n suth  ndivisibleby2}|
+  \item |Evens = {n suth  n divisible by 2}|
     \vfill
-  \item equals |2| |= {n suth nis2}|
+  \item |Eq2 = {n suth n = 2}|
     \vfill
-  \item smaller than |3| |= {n suth nsm3}|
+  \item |Smaller3 = {n suth n < 3}|
     \vfill
-  \item prime |= {n suth n2div}|
+  \item |Primes = {n suth n has exactly two divisors}|
+    \vfill
+  \item \ldots
+    \vfill
+  \end{itemize}
+\vfill
+\end{frame}
+
+%% -------------------------------------------------------------------
+
+\begin{frame}
+  \frametitle{The extensional view}
+  \vfill
+> Nat = {0, 1, 2, 3, ...}
+  \vfill
+  \begin{itemize}
+  \item |Evens = {n suth  ndivisibleby2}|
+    \vfill
+  \item |Eq2 = {n suth nis2}|
+    \vfill
+  \item |Smaller3 = {n suth nsm3}|
+    \vfill
+  \item |Primes = {n suth n2div}|
     \vfill
   \item \ldots
     \vfill
@@ -783,7 +783,7 @@ A function that is both onto and one-to-one:
 \begin{frame}
   \frametitle{Enumerating properties}
 
-  Does there exist a one-to-one and unto function |f : Nat -> (Nat -> Bool)|?
+  There are many one-to-one functions |f : Nat -> (Nat -> Bool)|?
 
   But can we find one which is unto?
 
@@ -863,7 +863,6 @@ Suppose we have |f : Nat -> (Nat -> Bool)| unto.
 
   \begin{column}{0.4\textwidth}
     \pause
-    Example:
 
 > f 0  =  even
 > f 1  =  eq2
@@ -920,9 +919,10 @@ Suppose we have |f : Nat -> (Nat -> Bool)| unto.
   \begin{column}{0.4\textwidth}
 > C    :  Nat -> Bool
 > C n  =  nnot ((f n) n)
-\pause
-    Example:
 
+    Example:
+    \pause
+    
 \hspace{-0.8cm}|C 0  =  nnot (even 0)      =  False|\pause
     
 \hspace{-0.8cm}|C 1  =  nnot (eq2 1)       =  True|\pause
@@ -979,11 +979,10 @@ Suppose we have |f : Nat -> (Nat -> Bool)| unto.
   \end{column}
 
   \begin{column}{0.4\textwidth}
-    \pause
 > C    :  Nat -> Bool
 > C n  =  nnot ((f n) n)
 \pause
-Find |N| such that |f N = C|.\pause
+Consider |N| such that |f N = C|.\pause
 
 \def\commentbegin{\quad\{\ }
 \def\commentend{\}}
@@ -1107,7 +1106,8 @@ The constructive universe is very small!
 \begin{frame}
   \frametitle{Enumerating \textbf{constructive} properties}
 
-Suppose we have \tt{f : Nat -> (Nat -> Bool)} unto.
+  Suppose we have {\tt f : Nat -> (Nat -> Bool)}
+  unto.
 
 \begin{columns}
   
@@ -1147,27 +1147,27 @@ Suppose we have \tt{f : Nat -> (Nat -> Bool)} unto.
   \begin{column}{0.4\textwidth}
     \pause
     
-    \tt{C    :  Nat -> Bool}
+    {\tt C    :  Nat -> Bool}
     
-    \tt{C n  =  not ((f n) n)}
+    {\tt C n  =  not ((f n) n)}
     
     \pause
     \vspace{0.5cm}
-Find \tt{N} such that
+Consider {\tt N} such that
 
-\tt{f N = C}.\pause
+{\tt f N = C}.\pause
 
 \vspace{0.5cm}
 
-\hspace{1.1cm}\tt{C N}
+\hspace{1.1cm}{\tt C N}
 
-= \{ Definition \tt{C} \}
+= \{ Definition {\tt C} \}
 
-\hspace{1.1cm}\tt{not ((f N) N)}
+\hspace{1.1cm}{\tt not ((f N) N)}
 
-= \{ \tt{f N = C} \}
+= \{ {\tt f N = C} \}
 
-\hspace{1.1cm}\tt{not (C N)}
+\hspace{1.1cm}{\tt not (C N)}
 
 \vspace{1cm}
   (G. Cantor, 1845-1918)
