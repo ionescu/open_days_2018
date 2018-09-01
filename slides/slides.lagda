@@ -1186,7 +1186,7 @@ The function that associates |Nat| to computable properties is not computable.
 The classical mathematician uses an ``illicit'' function to prove there are as
 many |Nat| as programs.
 \pause\vfill
-Consequence: there is no function that can distinguish ``good'' programs from ``bad'' programs!
+Consequence: there is no program that can distinguish ``good'' programs from ``bad'' programs!
 \vfill
 \end{frame}
 
