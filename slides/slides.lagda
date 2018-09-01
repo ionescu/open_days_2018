@@ -81,7 +81,16 @@
 %% \end{spec}
 %% \end{exampleblock}
 
-
+\begin{columns}
+  \begin{column}{0.3\textwidth}
+\includegraphics[width=.8\linewidth]{ou.eps}  
+  \end{column}
+  \begin{column}{0.7\textwidth}
+    OUDCE, Open Day, 1st September 2018 \\
+    \small{\url{https://github.com/ionescu/open_days_2018}}
+  \end{column}
+\end{columns}
+\vfill
 \end{frame}
 
 %% -------------------------------------------------------------------
