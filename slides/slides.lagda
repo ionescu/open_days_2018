@@ -551,7 +551,7 @@ Properties are functions:
   \draw[blue, ->] (0) -- (f);
   \draw[blue, ->] (1) -- (f);
   \draw[red, ->] (2) -- (t);
-  \draw[red, ->] (3) -- (f);
+  \draw[red, ->] (3) -- (t);
   \draw[blue, ->] (4) -- (f);
 \end{tikzpicture}
 
